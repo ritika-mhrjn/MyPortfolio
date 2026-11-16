@@ -1,0 +1,552 @@
+@{
+    ViewData["Title"] = "Home";
+    var firstName = "RITIKA";
+    var lastName = "MAHARJAN";
+    var charIndex = 0;
+}
+
+@* ============================================================
+   HERO
+   ============================================================ *@
+<section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="wrap hero-inner">
+        <div class="hero-meta">
+            <p class="label hero-meta-item">(Portfolio — @DateTime.Now.Year)</p>
+            <p class="label hero-meta-item hero-meta-location">Kathmandu, Nepal <span class="hero-meta-coords">27.7°N&nbsp;85.3°E</span></p>
+            <p class="label hero-meta-item hero-meta-time"><span class="live-dot" aria-hidden="true"></span><span class="hero-meta-time-label">Local time</span> <span data-clock>—</span>&nbsp;NPT</p>
+        </div>
+
+        <div class="hero-title-block">
+            <h1 class="hero-name" id="hero-title" aria-label="Ritika Maharjan">
+                <span class="hero-name-line" aria-hidden="true">
+                    @foreach (var letter in firstName)
+                    {
+                        <span class="char" style="--i:@(charIndex++)">@letter</span>
+                    }
+                </span>
+                <span class="hero-name-line" aria-hidden="true">
+                    @foreach (var letter in lastName)
+                    {
+                        <span class="char" style="--i:@(charIndex++)">@letter</span>
+                    }<span class="char hero-name-dot" style="--i:@(charIndex++)">.</span>
+                </span>
+            </h1>
+            <p class="hero-aside label" aria-hidden="true">An index of<br />backend work —<br />APIs, data &amp; systems</p>
+        </div>
+
+        <div class="hero-grid">
+            <span class="hero-rule" aria-hidden="true"></span>
+
+            <div class="hero-role">
+                <p class="hero-role-title">Backend Developer</p>
+                <p class="label hero-role-stack">C# / ASP.NET Core / SQL Server</p>
+            </div>
+
+            <p class="hero-intro">
+                I'm a Backend Developer specializing in C# and ASP.NET Core, passionate about building reliable APIs,
+                designing efficient database operations and solving real-world engineering problems.
+            </p>
+
+            <ul class="hero-actions" aria-label="Primary links">
+                <li><a class="arrow-link" href="/#projects"><span class="arrow-link-icon arrow-down" aria-hidden="true">↓</span><span class="arrow-link-text">View Selected Work</span></a></li>
+                <li><a class="arrow-link" href="/#contact"><span class="arrow-link-icon" aria-hidden="true">→</span><span class="arrow-link-text">Get in Touch</span></a></li>
+                <li><a class="arrow-link" href="/files/RitikaCVOnline.pdf" download="Ritika-Maharjan-CV.pdf"><span class="arrow-link-icon arrow-down" aria-hidden="true">⤓</span><span class="arrow-link-text">Download CV</span><span class="label">PDF</span></a></li>
+                <li class="hero-socials">
+                    <a class="text-link" href="https://github.com/ritika-mhrjn" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://www.linkedin.com/in/ritikamhrz/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hero-foot">
+            <p class="hero-currently">
+                <span class="label">Currently</span>
+                <span class="hero-currently-text">Jr. Developer at Global Square — <span class="rotator" data-rotator data-words='["building REST APIs","writing stored procedures","tracing bugs to the data","streaming updates with SSE"]'>building REST APIs</span></span>
+            </p>
+            <a class="scroll-cue label" href="/#about"><span>Scroll</span><span class="scroll-cue-line" aria-hidden="true"></span></a>
+        </div>
+    </div>
+</section>
+
+@* ============================================================
+   01 — ABOUT
+   ============================================================ *@
+<section class="section about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+        <header class="section-head">
+            <span class="section-index">(01)</span>
+            <h2 class="label section-label" id="about-title">About</h2>
+            <span class="rule" aria-hidden="true"></span>
+            <span class="label section-aside">Profile</span>
+        </header>
+
+        <div class="about-grid">
+            <p class="about-statement reveal-title">
+                I build the parts of software people rarely see — <span class="accent">the APIs, queries and business logic</span>
+                that keep real applications <em class="serif">dependable.</em>
+            </p>
+
+            <div class="about-columns">
+                <div class="about-column reveal" style="--d:0ms">
+                    <h3 class="label">The journey</h3>
+                    <p>
+                        I joined Global Square in September 2025 as a Backend Developer Intern, contributing to the Tapaiko Bazar
+                        e-commerce platform. As a trainee I worked on a Human Resource Management System built around clean
+                        architecture, and today, as a Jr. Developer, I develop and maintain customer and administrative modules for Hoslog.
+                    </p>
+                </div>
+                <div class="about-column reveal" style="--d:120ms">
+                    <h3 class="label">The approach</h3>
+                    <p>
+                        I like tracing a problem from the request all the way to the data — reading the stored procedure, checking
+                        the query, understanding why. I work within an application's existing architecture and coding standards,
+                        and favour clear, maintainable solutions.
+                    </p>
+                </div>
+                <div class="about-column reveal" style="--d:240ms">
+                    <h3 class="label">The interests</h3>
+                    <p>
+                        REST API design, efficient database operations with Dapper and SQL Server, authentication and validation,
+                        and real-time updates with Server-Sent Events that replace repeated polling.
+                    </p>
+                </div>
+            </div>
+
+            <dl class="facts reveal">
+                <div class="fact"><dt class="label">Based in</dt><dd>Kathmandu, Nepal</dd></div>
+                <div class="fact"><dt class="label">Working at</dt><dd>Global Square, since 2025</dd></div>
+                <div class="fact"><dt class="label">Focus</dt><dd>APIs &amp; data access</dd></div>
+                <div class="fact"><dt class="label">Core stack</dt><dd>C# · ASP.NET Core · SQL Server</dd></div>
+            </dl>
+        </div>
+    </div>
+</section>
+
+@* ============================================================
+   01.B — TOOLKIT (skills)
+   ============================================================ *@
+<section class="section section-tight skills" id="skills" aria-labelledby="skills-title">
+    <div class="wrap">
+        <header class="section-head">
+            <span class="section-index">(01.b)</span>
+            <h2 class="label section-label" id="skills-title">Toolkit</h2>
+            <span class="rule" aria-hidden="true"></span>
+            <span class="label section-aside">Index of tools</span>
+        </header>
+
+        <div class="skills-intro">
+            <p class="section-title reveal-title">A practical toolkit for <em class="serif">backend</em> work.</p>
+            <p class="skills-note reveal">Grouped by where each tool sits in the stack — from the language, through the API, down to the data.</p>
+        </div>
+
+        <ol class="index-list">
+            <li class="index-row reveal">
+                <span class="index-num">01</span>
+                <h3 class="index-cat">Programming</h3>
+                <p class="index-items"><span>C#</span><span>SQL</span><span>JavaScript</span></p>
+            </li>
+            <li class="index-row reveal">
+                <span class="index-num">02</span>
+                <h3 class="index-cat">Backend</h3>
+                <p class="index-items"><span>ASP.NET Core</span><span>.NET 9</span><span>Web API</span><span>Node.js</span><span>Express.js</span></p>
+            </li>
+            <li class="index-row reveal">
+                <span class="index-num">03</span>
+                <h3 class="index-cat">Database</h3>
+                <p class="index-items"><span>Microsoft SQL Server</span><span>MongoDB</span></p>
+            </li>
+            <li class="index-row reveal">
+                <span class="index-num">04</span>
+                <h3 class="index-cat">Data access</h3>
+                <p class="index-items"><span>Dapper</span><span>ADO.NET</span><span>Stored procedures</span></p>
+            </li>
+            <li class="index-row reveal">
+                <span class="index-num">05</span>
+                <h3 class="index-cat">Authentication</h3>
+                <p class="index-items"><span>JWT</span><span>Authentication</span><span>Authorization</span></p>
+            </li>
+            <li class="index-row reveal">
+                <span class="index-num">06</span>
+                <h3 class="index-cat">API development</h3>
+                <p class="index-items"><span>API Versioning</span><span>Validation</span><span>Error Handling</span><span>SSE</span></p>
+            </li>
+            <li class="index-row reveal">
+                <span class="index-num">07</span>
+                <h3 class="index-cat">Tools</h3>
+                <p class="index-items"><span>Visual Studio</span><span>Git</span><span>GitHub</span><span>Postman</span><span>Swagger</span></p>
+            </li>
+            <li class="index-row reveal">
+                <span class="index-num">08</span>
+                <h3 class="index-cat">Concepts</h3>
+                <p class="index-items"><span>OOP</span><span>Debugging</span><span>Database Optimization</span><span>API Integration</span></p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+@* ============================================================
+   02 — EXPERIENCE
+   ============================================================ *@
+<section class="section experience" id="experience" aria-labelledby="experience-title">
+    <div class="wrap">
+        <header class="section-head">
+            <span class="section-index">(02)</span>
+            <h2 class="label section-label" id="experience-title">Experience</h2>
+            <span class="rule" aria-hidden="true"></span>
+            <span class="label section-aside">Sep 2025 — Present</span>
+        </header>
+
+        <div class="experience-intro">
+            <p class="section-title reveal-title">One company, <em class="serif">three stages</em> of growth.</p>
+            <div class="experience-company reveal">
+                <p class="experience-company-name">Global Square</p>
+                <p class="label">Nepal · Backend development</p>
+            </div>
+        </div>
+
+        <ol class="journey" data-journey>
+            <li class="stage is-current">
+                <div class="stage-aside">
+                    <span class="stage-num" aria-hidden="true">III</span>
+                    <p class="stage-dates label">June 2026 — <em class="serif stage-present">Present</em></p>
+                </div>
+                <span class="stage-marker" aria-hidden="true"></span>
+                <article class="stage-body reveal">
+                    <h3 class="stage-role">Jr. Developer <span>(Backend)</span></h3>
+                    <ul class="stage-list">
+                        <li>Develop and maintain REST APIs and backend business logic for existing applications using C# and ASP.NET Core.</li>
+                        <li>Use Dapper and SQL Server stored procedures for database operations, including customer and administrative modules for Hoslog.</li>
+                        <li>Work on authentication, authorization, API validation, encryption and decryption, and error handling.</li>
+                        <li>Implement Server-Sent Events for notification and recommendation updates without repeated API polling.</li>
+                        <li>Debug application issues, investigate database operations, follow existing coding standards and collaborate on frontend API integration.</li>
+                    </ul>
+                    <p class="stage-tags label">C# · ASP.NET Core · Dapper · SQL Server · SSE</p>
+                </article>
+            </li>
+            <li class="stage">
+                <div class="stage-aside">
+                    <span class="stage-num" aria-hidden="true">II</span>
+                    <p class="stage-dates label">December 2025 — June 2026</p>
+                </div>
+                <span class="stage-marker" aria-hidden="true"></span>
+                <article class="stage-body reveal">
+                    <h3 class="stage-role">Trainee <span>(Backend Developer)</span></h3>
+                    <ul class="stage-list">
+                        <li>Worked on backend development using C# and ASP.NET Core, contributing to REST APIs and SQL Server stored procedures.</li>
+                        <li>Contributed to the Human Resource Management System (HRMS) using clean architecture.</li>
+                        <li>Built experience in debugging, database operations and application maintenance.</li>
+                    </ul>
+                    <p class="stage-tags label">C# · ASP.NET Core · SQL Server · Dapper</p>
+                </article>
+            </li>
+            <li class="stage">
+                <div class="stage-aside">
+                    <span class="stage-num" aria-hidden="true">I</span>
+                    <p class="stage-dates label">September 2025 — December 2025</p>
+                </div>
+                <span class="stage-marker" aria-hidden="true"></span>
+                <article class="stage-body reveal">
+                    <h3 class="stage-role">Backend Developer Intern</h3>
+                    <ul class="stage-list">
+                        <li>Contributed to backend development of the Tapaiko Bazar e-commerce platform.</li>
+                        <li>Assisted with REST API development and database operations using ASP.NET Core, Dapper and SQL Server.</li>
+                        <li>Worked with JWT authentication.</li>
+                    </ul>
+                    <p class="stage-tags label">ASP.NET Core · Dapper · SQL Server · JWT</p>
+                </article>
+            </li>
+        </ol>
+    </div>
+</section>
+
+@* ============================================================
+   03 — PROJECTS
+   ============================================================ *@
+<section class="section projects" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+        <header class="section-head">
+            <span class="section-index">(03)</span>
+            <h2 class="label section-label" id="projects-title">Selected Work</h2>
+            <span class="rule" aria-hidden="true"></span>
+            <span class="label section-aside">05 Projects</span>
+        </header>
+
+        <div class="projects-intro">
+            <p class="section-title reveal-title">Backend work with a <em class="serif">purpose.</em></p>
+            <p class="projects-note reveal">Business applications built at Global Square, followed by full-stack projects. Select a project to read its notes.</p>
+        </div>
+
+        @* --- 01 Hoslog: full-width feature --- *@
+        <article class="work work-feature reveal" data-cursor="View">
+            <div class="work-meta label">
+                <span class="work-num">01</span>
+                <span>Business platform</span>
+                <span class="work-meta-context">At Global Square</span>
+                <span class="work-open-hint" aria-hidden="true">Read notes +</span>
+            </div>
+            <h3 class="work-title">
+                <button class="work-open" type="button" data-project-open="#hoslog-dialog" aria-haspopup="dialog">Hoslog</button>
+            </h3>
+            <div class="work-text">
+                <p class="work-subtitle">Customer and Admin Platform</p>
+                <p class="work-desc">Customer and administrative backend modules — recommendations, referrals, ratings and reviews — built and maintained on top of an existing architecture.</p>
+                <p class="work-tags label">ASP.NET Core · C# · Dapper · SQL Server</p>
+            </div>
+            <figure class="work-visual visual-modules" aria-hidden="true">
+                <div class="visual-modules-grid">
+                    <span>Customer summary</span>
+                    <span>Recommendations</span>
+                    <span>Referral flow</span>
+                    <span>Ratings &amp; reviews</span>
+                    <span>Review rotation</span>
+                </div>
+                <div class="visual-modules-db"><span class="visual-line"></span><span>SQL Server · stored procedures</span></div>
+                <figcaption class="label">Fig. 01 — Module overview</figcaption>
+            </figure>
+        </article>
+
+        @* --- 02 & 03: offset pair --- *@
+        <div class="work-pair">
+            <article class="work work-card reveal" data-cursor="View">
+                <div class="work-meta label">
+                    <span class="work-num">02</span>
+                    <span>Workforce management</span>
+                    <span class="work-meta-context">At Global Square</span>
+                </div>
+                <figure class="work-visual visual-layers" aria-hidden="true">
+                    <div class="layer layer-outer">
+                        <span class="layer-name">Infrastructure</span>
+                        <div class="layer layer-mid">
+                            <span class="layer-name">Application</span>
+                            <div class="layer layer-core">
+                                <span class="layer-name">Domain</span>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption class="label">Fig. 02 — Clean architecture</figcaption>
+                </figure>
+                <h3 class="work-title">
+                    <button class="work-open" type="button" data-project-open="#hrms-dialog" aria-haspopup="dialog">Human Resource Management System</button>
+                </h3>
+                <p class="work-desc">HRMS functionality — employees, departments and authentication — with a clear separation of application, domain and infrastructure.</p>
+                <p class="work-tags label">ASP.NET Core · C# · SQL Server · Dapper</p>
+            </article>
+
+            <article class="work work-card work-card-offset reveal" data-cursor="View">
+                <div class="work-meta label">
+                    <span class="work-num">03</span>
+                    <span>E-commerce</span>
+                    <span class="work-meta-context">At Global Square</span>
+                </div>
+                <figure class="work-visual visual-flow" aria-hidden="true">
+                    <div class="visual-flow-steps">
+                        <span>Catalog</span><i></i><span>Order</span><i></i><span>Payment</span>
+                    </div>
+                    <span class="visual-flow-token label">JWT · Authorization</span>
+                    <figcaption class="label">Fig. 03 — Request path</figcaption>
+                </figure>
+                <h3 class="work-title">
+                    <button class="work-open" type="button" data-project-open="#bazar-dialog" aria-haspopup="dialog">Tapaiko Bazar</button>
+                </h3>
+                <p class="work-subtitle">E-commerce Platform</p>
+                <p class="work-desc">REST APIs, Dapper-based data access and JWT authentication for customer and administrative modules.</p>
+                <p class="work-tags label">ASP.NET Core 9 · C# · Dapper · SQL Server · JWT</p>
+            </article>
+        </div>
+
+        @* --- 04 & 05: archive rows with floating previews --- *@
+        <div class="work-list">
+            <p class="work-list-label label">Full-stack projects</p>
+
+            <article class="work work-row reveal" data-cursor="View" data-preview="nayamat">
+                <span class="work-num work-row-num">04</span>
+                <div class="work-row-main">
+                    <h3 class="work-title">
+                        <button class="work-open" type="button" data-project-open="#nayamat-dialog" aria-haspopup="dialog">NayaMat</button>
+                    </h3>
+                    <p class="work-desc">Real-Time Digital Voting System — voter flows, election management and live vote counting.</p>
+                </div>
+                <p class="work-tags label">MongoDB · Express.js · React.js · Node.js</p>
+                <span class="work-row-arrow" aria-hidden="true">→</span>
+            </article>
+
+            <article class="work work-row reveal" data-cursor="View" data-preview="prediction">
+                <span class="work-num work-row-num">05</span>
+                <div class="work-row-main">
+                    <h3 class="work-title">
+                        <button class="work-open" type="button" data-project-open="#prediction-dialog" aria-haspopup="dialog">Student Performance Prediction</button>
+                    </h3>
+                    <p class="work-desc">A MERN application that predicts student performance using decision-tree models.</p>
+                </div>
+                <p class="work-tags label">MERN Stack · ID3 Decision Tree · Random Forest</p>
+                <span class="work-row-arrow" aria-hidden="true">→</span>
+            </article>
+        </div>
+    </div>
+
+    @* Floating hover preview (pointer devices only) *@
+    <div class="preview-float" data-preview-float aria-hidden="true">
+        <div class="preview-panel visual-seal" data-preview-panel="nayamat">
+            <span class="visual-seal-ring">
+                <span class="label">One voter</span>
+                <strong>One vote</strong>
+                <span class="label">Live count</span>
+            </span>
+        </div>
+        <div class="preview-panel visual-tree" data-preview-panel="prediction">
+            <span class="visual-tree-node">Student data</span>
+            <span class="visual-tree-split"><span class="visual-tree-node">ID3</span><span class="visual-tree-node">Random Forest</span></span>
+            <span class="visual-tree-node visual-tree-result">Prediction</span>
+        </div>
+    </div>
+
+    @* ---------- Project detail sheets ---------- *@
+    <dialog class="project-dialog" id="hoslog-dialog" aria-labelledby="hoslog-title">
+        <div class="project-dialog-header">
+            <p class="label">Project 01 / Business platform</p>
+            <button class="dialog-close" type="button" data-project-close aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+        </div>
+        <h3 class="project-dialog-title" id="hoslog-title">Hoslog — Customer and Admin Platform</h3>
+        <p class="project-dialog-description">Worked on customer and administrative backend modules, including API development and maintenance for the Hoslog platform.</p>
+        <h4 class="label">Selected functionality</h4>
+        <ul class="project-feature-list">
+            <li>Recommendation management and customer summaries.</li>
+            <li>Referral flow and ratings and review retrieval.</li>
+            <li>SQL Server stored procedure development and modification.</li>
+            <li>Review rotation and data retrieval logic.</li>
+            <li>Maintaining the existing application structure.</li>
+        </ul>
+        <h4 class="label">Stack</h4>
+        <p class="project-dialog-tags">ASP.NET Core · C# · Dapper · SQL Server</p>
+        <p class="project-link-note">Repository and live demo links were not provided.</p>
+    </dialog>
+
+    <dialog class="project-dialog" id="hrms-dialog" aria-labelledby="hrms-title">
+        <div class="project-dialog-header">
+            <p class="label">Project 02 / Workforce management</p>
+            <button class="dialog-close" type="button" data-project-close aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+        </div>
+        <h3 class="project-dialog-title" id="hrms-title">Human Resource Management System</h3>
+        <p class="project-dialog-description">Contributed to HRMS backend functionality while exploring clean architecture and separation of responsibilities.</p>
+        <h4 class="label">Selected functionality</h4>
+        <ul class="project-feature-list">
+            <li>Employee and department management.</li>
+            <li>Authentication and database-related functionality.</li>
+            <li>Separation of application, domain and infrastructure responsibilities.</li>
+        </ul>
+        <h4 class="label">Stack</h4>
+        <p class="project-dialog-tags">ASP.NET Core · C# · SQL Server · Dapper</p>
+        <p class="project-link-note">Repository and live demo links were not provided.</p>
+    </dialog>
+
+    <dialog class="project-dialog" id="bazar-dialog" aria-labelledby="bazar-title">
+        <div class="project-dialog-header">
+            <p class="label">Project 03 / E-commerce</p>
+            <button class="dialog-close" type="button" data-project-close aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+        </div>
+        <h3 class="project-dialog-title" id="bazar-title">Tapaiko Bazar — E-commerce Platform</h3>
+        <p class="project-dialog-description">Contributed to backend development of an e-commerce platform, including APIs, database operations and authentication.</p>
+        <h4 class="label">Selected functionality</h4>
+        <ul class="project-feature-list">
+            <li>REST API development.</li>
+            <li>Dapper-based database operations and stored procedures.</li>
+            <li>Authentication and authorization with JWT.</li>
+            <li>Customer and administrative modules.</li>
+            <li>eSewa payment integration.</li>
+        </ul>
+        <h4 class="label">Stack</h4>
+        <p class="project-dialog-tags">ASP.NET Core 9 · C# · Dapper · SQL Server · JWT</p>
+        <p class="project-link-note">Repository and live demo links were not provided.</p>
+    </dialog>
+
+    <dialog class="project-dialog" id="nayamat-dialog" aria-labelledby="nayamat-title">
+        <div class="project-dialog-header">
+            <p class="label">Project 04 / Digital voting</p>
+            <button class="dialog-close" type="button" data-project-close aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+        </div>
+        <h3 class="project-dialog-title" id="nayamat-title">NayaMat — Real-Time Digital Voting System</h3>
+        <p class="project-dialog-description">Developed a MERN-stack digital voting platform with voter workflows and election administration.</p>
+        <h4 class="label">Selected functionality</h4>
+        <ul class="project-feature-list">
+            <li>Voter registration and login.</li>
+            <li>Admin panel for election management.</li>
+            <li>One-person-one-vote validation.</li>
+            <li>Live vote counting and result visualization.</li>
+        </ul>
+        <h4 class="label">Stack</h4>
+        <p class="project-dialog-tags">MongoDB · Express.js · React.js · Node.js</p>
+        <p class="project-link-note">Repository and live demo links were not provided.</p>
+    </dialog>
+
+    <dialog class="project-dialog" id="prediction-dialog" aria-labelledby="prediction-title">
+        <div class="project-dialog-header">
+            <p class="label">Project 05 / Machine learning</p>
+            <button class="dialog-close" type="button" data-project-close aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+        </div>
+        <h3 class="project-dialog-title" id="prediction-title">Student Performance Prediction System</h3>
+        <p class="project-dialog-description">Developed a MERN application for student data management and performance prediction using decision-tree algorithms.</p>
+        <figure class="project-dialog-media">
+            <video controls preload="none" playsinline>
+                <source src="/video/Vite%20%2B%20React%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%202025-09-02%2022-49-01.mp4" type="video/mp4" />
+                Your browser does not support embedded video.
+            </video>
+            <figcaption class="label">Screen recording of the application (large file — loads on play)</figcaption>
+        </figure>
+        <h4 class="label">Selected functionality</h4>
+        <ul class="project-feature-list">
+            <li>Student performance prediction.</li>
+            <li>ID3 Decision Tree and Random Forest algorithms.</li>
+            <li>Student data management.</li>
+            <li>Prediction results displayed through the web application.</li>
+        </ul>
+        <h4 class="label">Stack</h4>
+        <p class="project-dialog-tags">MERN Stack · ID3 Decision Tree · Random Forest</p>
+        <p class="project-link-note">Repository and live demo links were not provided.</p>
+    </dialog>
+</section>
+
+@* ============================================================
+   04 — CONTACT
+   ============================================================ *@
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+        <header class="section-head">
+            <span class="section-index">(04)</span>
+            <p class="label section-label">Contact</p>
+            <span class="rule" aria-hidden="true"></span>
+            <span class="label section-aside">Kathmandu, Nepal</span>
+        </header>
+
+        <h2 class="contact-title reveal-title" id="contact-title">Have something <em class="serif">interesting</em> in mind?</h2>
+
+        <div class="contact-grid">
+            <p class="contact-lead reveal">For professional inquiries, or a conversation about backend development, my inbox is open.</p>
+
+            <div class="contact-email reveal">
+                <span class="label">Write to</span>
+                <a class="email-link" href="mailto:ritika2021mhrjn@gmail.com">ritika2021mhrjn@gmail.com</a>
+                <button class="copy-button label" type="button" data-copy="ritika2021mhrjn@gmail.com">Copy address</button>
+                <span class="copy-status label" role="status" aria-live="polite"></span>
+            </div>
+
+            <ul class="contact-list reveal">
+                <li>
+                    <span class="label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/ritikamhrz/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ritikamhrz <span class="contact-arrow" aria-hidden="true">↗</span></a>
+                </li>
+                <li>
+                    <span class="label">GitHub</span>
+                    <a href="https://github.com/ritika-mhrjn" target="_blank" rel="noopener noreferrer">github.com/ritika-mhrjn <span class="contact-arrow" aria-hidden="true">↗</span></a>
+                </li>
+                <li>
+                    <span class="label">Curriculum vitae</span>
+                    <a href="/files/RitikaCVOnline.pdf" download="Ritika-Maharjan-CV.pdf">Download CV (PDF) <span class="contact-arrow contact-arrow-down" aria-hidden="true">↓</span></a>
+                </li>
+                <li>
+                    <span class="label">Location</span>
+                    <span>Kathmandu, Nepal</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

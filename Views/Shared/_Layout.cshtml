@@ -1,0 +1,94 @@
+@{
+    var routeController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var routeAction = ViewContext.RouteData.Values["action"]?.ToString();
+    var isHome = string.Equals(routeController, "Home", StringComparison.OrdinalIgnoreCase)
+                 && string.Equals(routeAction, "Index", StringComparison.OrdinalIgnoreCase);
+    var pageTitle = isHome
+        ? "Ritika Maharjan — Backend Developer"
+        : $"{ViewData["Title"]} | Ritika Maharjan";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ritika Maharjan is a Backend Developer in Kathmandu, Nepal, specializing in C#, ASP.NET Core, REST APIs and SQL Server." />
+    <meta name="color-scheme" content="light dark" />
+    <title>@pageTitle</title>
+
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) { }
+            if (theme !== "light" && theme !== "dark") {
+                theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            document.documentElement.setAttribute("data-theme", theme);
+            document.documentElement.classList.add("js");
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="/#home" aria-label="Ritika Maharjan, back to top">
+                RM<span class="wordmark-dot" aria-hidden="true">.</span>
+            </a>
+
+            <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
+                <a class="site-nav-link" href="/#about"><span class="site-nav-num" aria-hidden="true">01</span>About</a>
+                <a class="site-nav-link" href="/#experience"><span class="site-nav-num" aria-hidden="true">02</span>Experience</a>
+                <a class="site-nav-link" href="/#projects"><span class="site-nav-num" aria-hidden="true">03</span>Projects</a>
+                <a class="site-nav-link" href="/#contact"><span class="site-nav-num" aria-hidden="true">04</span>Contact</a>
+                <p class="site-nav-footnote" aria-hidden="true">Kathmandu, Nepal</p>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle colour theme">
+                    <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-knob"></span></span>
+                    <span class="theme-toggle-label" data-theme-label>Theme</span>
+                </button>
+
+                <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation">
+                    <span class="menu-toggle-line" aria-hidden="true"></span>
+                    <span class="menu-toggle-line" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p class="footer-name">Ritika Maharjan<span class="wordmark-dot">.</span></p>
+            <p class="footer-meta">Backend Developer — Kathmandu, Nepal</p>
+            <nav class="footer-links" aria-label="Social and contact links">
+                <a href="https://github.com/ritika-mhrjn" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/ritikamhrz/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:ritika2021mhrjn@gmail.com">Email</a>
+            </nav>
+            <p class="footer-copy">&copy; @DateTime.Now.Year &nbsp;·&nbsp; Built with ASP.NET Core</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" hidden>
+        <span aria-hidden="true">↑</span>
+    </button>
+
+    <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<section class="section error-page" aria-labelledby="error-title">
+    <div class="wrap">
+        <header class="section-head">
+            <span class="section-index">(—)</span>
+            <p class="label section-label">Error</p>
+            <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <h1 class="section-title" id="error-title">Something went <em class="serif">wrong.</em></h1>
+        <p class="error-page-text">An unexpected error occurred while processing your request. Please try again in a moment.</p>
+
+        @if (Model?.ShowRequestId == true)
+        {
+            <p class="label">Request ID: @Model.RequestId</p>
+        }
+
+        <p class="error-page-action">
+            <a class="arrow-link" href="/"><span class="arrow-link-icon" aria-hidden="true">←</span><span class="arrow-link-text">Back to the portfolio</span></a>
+        </p>
+    </div>
+</section>
